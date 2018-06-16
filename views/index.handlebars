@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>Full Stack Developers</h1>
+        <h3>All Job Openings for Full Stack Developers </h3>
+        <a href="/scrape">
+            <button type="button" class="btn btn-danger jobscrape"> Scrape for Jobs </button>
+        </a>
+    </div>
+    <div class="jobs-container">
+
+        {{#each Job}}
+        <div class="row">
+
+            <div class="panel panel-sucsess">
+                <div class="panel-heading">{{this.title}}
+                    <a href="/notes/{{this._id}}">
+                        <button type="button" class="btn btn-warning save-jobs">See Notes</button>
+                    </a>
+                </div>
+                <div class="panel-body">
+                    <a href="https://www.indeed.com/jobs?q=html&l=Kennesaw,%20GA{{this.link}}" target="_blank"> {{this.link}}</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <footer class="footer container">
+        <a href="/">Home</a>
+    </footer>
+
+</div>
+<script>
+</script>
